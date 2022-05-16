@@ -29,7 +29,7 @@ def register(request):
             form.save()
             return redirect('home')
     else:
-        form = UserRegisterForm
+        form = UserRegisterForm()
         
     context = {'form': form}
     return render(request, 'twitter/register.html', context)
